@@ -5,9 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://thumbs.gfycat.com/PowerfulCourteousAmericanwirehair-max-1mb.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .8;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
