@@ -1,0 +1,45 @@
+.container1
+{
+    width: 40%;
+    text-align: center;
+    margin-left: 30%;
+    background-color: blueviolet;
+}
+.dropdown{
+    color: white;
+    margin-top: 10px;
+    float: left;
+}
+.radio_button{
+    margin-top: 10px;
+    float: right;
+    margin-right: 20px;
+    display: block;
+    color: white;
+}
+.getHour{
+    margin-top: 50px;
+    display: block;
+    margin-left: 10px;
+    color: white;
+}
+#visited_not_complete{
+    margin-left: 10px;
+}
+.btn-primary{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 50px;
+}
+.back_button{
+    margin-top: 20px;
+    text-align: center;
+}
+.comit
+{
+    font-weight: bold;
+    margin-top: 20px;
+}
+#margine{
+    margin-top: 40px;
+}

@@ -1,0 +1,11 @@
+td{
+    margin-left: 40px;
+    border: 1px solid black;
+    background-color: burlywood;
+}
+table{
+    border: 1px solid goldenrod;
+}
+#btn1{
+    margin-left: 20px;
+}
