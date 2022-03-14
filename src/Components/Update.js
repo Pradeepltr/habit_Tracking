@@ -1,3 +1,4 @@
+// Import all required things
 import React from 'react';
 import "./Update.css"
 import { useEffect,useState } from 'react';
@@ -7,6 +8,7 @@ import { collection,doc,getDocs,updateDoc } from 'firebase/firestore';
 import { async } from '@firebase/util';
 
 const Update=()=>{
+  // Handle all data that required for firebase updation
     const [listdata,setLisdata]=useState([]);
     const [newcol,setnewcol]=useState({
         working_days:[],
@@ -24,6 +26,7 @@ const Update=()=>{
         
        
     })
+    // Fetch firebase data for validation
     useEffect(async()=>{
         console.log("welcme");
       const fetch_data=collection(FirDb,"Habit_data");
@@ -45,6 +48,7 @@ const Update=()=>{
      var h_name=''
      var target_hour=''
      listdata.map((e)=>{
+      //  Check and update firebase required data
          if(e.habit_name.toLowerCase()===data.habit_name.toLowerCase())
          {
            var arr=e.working_day
@@ -106,18 +110,26 @@ const Update=()=>{
        }
      })
     console.log(newcol)
+    // Update firebase data through their unique key
+    try{
      const newDoc= await doc(FirDb,"Habit_data",id);
      
      updateDoc(newDoc,newcol);
+     alert("Data successfully updated")
      setData({
       habit_name:'',
       status:'',
       comit:'',
       days:0
      })
+    }
+    catch{
+     alert("Data not updated")
+    }
     
      
    }
+  //  JSX return parent
     return(
         <>
        <div className='container1'>

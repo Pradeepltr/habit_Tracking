@@ -1,4 +1,5 @@
 // Import the functions you need from the SDKs you need
+import { configure } from "@testing-library/react";
 import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase/firestore";
 
@@ -19,5 +20,5 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const FirDb=getFirestore(app)
-
+// export firebase configure
 export {FirDb};

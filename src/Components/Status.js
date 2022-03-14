@@ -1,3 +1,4 @@
+// Import all required things
 import React  from "react";
 import { useEffect,useState } from "react";
 import { collection,addDoc, Firestore,getDocs,deleteDoc,doc } from 'firebase/firestore';
@@ -9,6 +10,7 @@ import { Link } from "react-router-dom";
 
 const Status=()=>{
     const [dbData,setdbData]=useState([])
+    // Fetch all data present on firebase firestore and add in dbData array
     useEffect(async()=>{
         console.log("welcme");
       const fetch_data=collection(FirDb,"Habit_data");
@@ -16,6 +18,7 @@ const Status=()=>{
       setdbData(habit_data.docs.map((doc)=>({...doc.data(), id:doc.id})))
       console.log(dbData)
     },[])
+    // Display habit name with their seven day status
     return(
         <>
         <Link to="/" className="btn btn-primary">Back to Home</Link>

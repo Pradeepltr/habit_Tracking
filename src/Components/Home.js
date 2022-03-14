@@ -1,3 +1,4 @@
+// Import all required things for this page
 import React from 'react';
 import "./Home.css";
 import { FirDb } from '../Firebase';
@@ -7,6 +8,7 @@ import { async } from '@firebase/util';
 import { Link } from 'react-router-dom';
 
 const Home=()=>{
+    // Use react hooks for store data and send firebase firestore
     const [data,setData]=useState({
        habit_name:''
       
@@ -17,6 +19,7 @@ const Home=()=>{
   
     
     let name,value;
+    // Function for handle input
     const HamdleInput=(e)=>{
         e.preventDefault();
         name=e.target.name;
@@ -64,6 +67,7 @@ const Home=()=>{
      
     console.log(data)
     }
+    // Function for add data into firebase firestore
     const AddData=async(e)=>{
         
     e.preventDefault();
@@ -85,12 +89,14 @@ const Home=()=>{
     Re_render();
     
     }
+    // Function for fetch data from firbase firestore
     const Re_render=async()=>{
         const fetch_data=collection(FirDb,"Habit_data");
         const habit_data= await getDocs(fetch_data)
         setdbData(habit_data.docs.map((doc)=>({...doc.data(), id:doc.id})))
         console.log(dbData)
     }
+     // Function for fetch data from firbase firestore on render page
     useEffect(async()=>{
         console.log("welcme");
       const fetch_data=collection(FirDb,"Habit_data");
@@ -105,6 +111,7 @@ const Home=()=>{
        deleteDoc(del_data);
        Re_render();
     }
+    // JSX return part
     return(
         <>
         <div className='form'>
