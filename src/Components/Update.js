@@ -172,7 +172,7 @@ const Update=()=>{
            <div className='back_button'>
           
 
-           <Link to="/home" className="btn btn-primary">Home</Link>
+           <Link to="/" className="btn btn-primary">Home</Link>
         <Link to="/status" className="btn btn-primary"id="btn1">status</Link>
            </div>
          

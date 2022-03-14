@@ -21,7 +21,7 @@ const Status=()=>{
     // Display habit name with their seven day status
     return(
         <>
-        <Link to="/home" className="btn btn-primary">Back to Home</Link>
+        <Link to="/" className="btn btn-primary">Back to Home</Link>
         <Link to="/update" className="btn btn-primary"id="btn1">Go to Update</Link>
      {dbData.map((e)=>{
          var i=1;

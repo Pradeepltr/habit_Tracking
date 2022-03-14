@@ -4,7 +4,7 @@ import './App.css';
 import Home from "./Components/Home"
 import Status from './Components/Status';
 import Update from './Components/Update';
-import {BrowserRouter as Router,Switch,Routes,Route,Redirect} from 'react-router-dom'
+import {BrowserRouter as Router,Switch,Routes,Route} from 'react-router-dom'
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       <>
       
       <Routes>
-        <Route  path='/home' element={<Home />}/>
+        <Route  path='/' element={<Home />}/>
         <Route  path='/status' element={<Status />}/>
         <Route  path='/update' element={<Update />}/>
         
