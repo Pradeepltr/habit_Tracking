@@ -74,6 +74,7 @@ const Home=()=>{
     console.log(data.total_hour)
     try{
         console.log(data)
+        if(data.habit_name!=""){
         const new_data=collection(FirDb,"Habit_data")
         addDoc(new_data,data);
         console.log("Data Submited");
@@ -82,6 +83,9 @@ const Home=()=>{
             target_hour:0
 
         })
+        }else{
+            alert("Please fill your Habit")
+        }
     }
     catch{
         alert("Data not submitted suceessfully");

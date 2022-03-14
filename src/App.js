@@ -10,10 +10,12 @@ function App() {
 
   return (
     // Use react router to navigate different component through button
+   
     <Router>
 
 
       <>
+      <Home />
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route exact path='/status' element={<Status />}/>
