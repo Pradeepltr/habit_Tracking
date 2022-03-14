@@ -2,7 +2,7 @@
   "name": "habit_tracking",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Pradeepltr.github.io/habit_Tracking",
+  "homepage": "https://Pradeepltr.github.io/habit_Tracking/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
